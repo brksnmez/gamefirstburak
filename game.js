@@ -48,7 +48,7 @@ function checkCollision() {
             player.y < obstacles[i].y + obstacleHeight &&
             player.y + player.height > obstacles[i].y
         ) {
-            alert(`Oyun bitti AMINA KODUUM! Skorunuz: ${score}`);
+            alert(`Oyun bitti AMINA KODUUM SALAĞI! Skorunuz: ${score}`);
             document.location.reload();
         }
     }
