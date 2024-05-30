@@ -20,7 +20,7 @@ const backgroundImg = new Image();
 
 playerImg.src = 'images/player.png';         // Oyuncu karakteri resmi (30x30 piksel)
 obstacleImg.src = 'images/obstacle.png';     // Engel resmi (30x30 piksel)
-backgroundImg.src = 'images/background.png'; // Arka plan resmi
+backgroundImg.src = 'images/background.jpg'; // Arka plan resmi
 
 const player = {
     x: canvas.width / 2 - 15,
