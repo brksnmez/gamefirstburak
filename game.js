@@ -6,8 +6,12 @@ const gameOverMessage = document.getElementById('gameOverMessage');
 const scoreSpan = document.getElementById('score');
 
 // Canvas boyutlarını cihazın ekran boyutuna göre ayarlama
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
 
 // Grafik dosyalarını yükleme
 const playerImg = new Image();
@@ -16,14 +20,14 @@ const backgroundImg = new Image();
 
 playerImg.src = 'images/player.png';         // Oyuncu karakteri resmi (30x30 piksel)
 obstacleImg.src = 'images/obstacle.png';     // Engel resmi (30x30 piksel)
-backgroundImg.src = 'images/background.jpg'; // Arka plan resmi
+backgroundImg.src = 'images/background.png'; // Arka plan resmi
 
 const player = {
     x: canvas.width / 2 - 15,
     y: canvas.height - 60,
     width: 30,
     height: 30,
-    speed: 40, // Oyuncu hızını artırdık
+    speed: 10,
 };
 
 const obstacles = [];
